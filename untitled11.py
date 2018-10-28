@@ -9,8 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-#1 get all a href from the main web page 
-#2 get all the a href form the secondary(s) web page(s) 
+#get all the a whit a href from the main/ home page
 
 def scrape_links(from_url):
     
@@ -24,7 +23,7 @@ def scrape_links(from_url):
         get_href_data(href)
 
 
-
+# function to find all href on secondary page 
 def get_href_data(href_url):
     try:
         source_code = requests.get(href_url)
